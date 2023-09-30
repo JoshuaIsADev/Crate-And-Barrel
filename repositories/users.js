@@ -95,16 +95,18 @@ class UsersRepository {
   }
 }
 
+module.exports = new UsersRepository('users.json');
+
 //TESTING CODE HELPER FUNCTION
-const test = async () => {
-  const repo = new UsersRepository('users.json');
-  const user = await repo.getOneBy({
-    email: 'test@test.com',
-    password: 'mypw',
-    id: '614f4b08',
-  });
+// const test = async () => {
+//   const repo = new UsersRepository('users.json');
+//   const user = await repo.getOneBy({
+//     email: 'test@test.com',
+//     password: 'mypw',
+//     id: '614f4b08',
+//   });
 
-  console.log(user);
-};
+//   console.log(user);
+// };
 
-test();
+// test();
