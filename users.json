@@ -11,5 +11,10 @@
     "email": "booty2@test.com",
     "password": "password",
     "id": "55d9ccdc"
+  },
+  {
+    "email": "testman1@test.com",
+    "password": "8c7dadbf05746edd3372c90f6e1bcac3f59c8982c0d85b814fedb2cd997ed6051c5a0f628548aa362e509eb9ecdfc58121ad6751a8f2843f8526d0086c346dff.1f136d53a86979d3",
+    "id": "6078f814"
   }
 ]
