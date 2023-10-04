@@ -16,5 +16,10 @@
     "email": "testman1@test.com",
     "password": "8c7dadbf05746edd3372c90f6e1bcac3f59c8982c0d85b814fedb2cd997ed6051c5a0f628548aa362e509eb9ecdfc58121ad6751a8f2843f8526d0086c346dff.1f136d53a86979d3",
     "id": "6078f814"
+  },
+  {
+    "email": "hello@test.com",
+    "password": "242bcf8ce148f97ff88677fb69e99773cfac26959f6dfd9b0238c31fb32cd947477ffd47c465c456e7d138b56a34fff0a078ba09991800dcce78ee8ac734bf56.85b14168cb290e92",
+    "id": "ef228464"
   }
 ]
