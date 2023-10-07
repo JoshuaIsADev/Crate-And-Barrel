@@ -19,21 +19,11 @@ class UsersRepository {
   }
 
   async getAll() {
-    //Open the file called this.filename
     return JSON.parse(
       await fs.promises.readFile(this.filename, {
         encoding: 'utf8',
       })
     );
-
-    //Read contents
-    // console.log(contents);
-
-    //parse the contents
-    // const data = JSON.parse(contents);
-
-    //return the parsed data
-    // return data;
   }
 
   async create(attrs) {
@@ -41,12 +31,7 @@ class UsersRepository {
     attrs.id = this.randomId();
 
     const salt = crypto.randomBytes(8).toString('hex');
-    // scrypt(attrs.password, salt, 64, (err, buf) => {
-    //   const hashed = buff.toString('hex');
-    // });
     const buf = await scrypt(attrs.password, salt, 64);
-
-    //{email:'r9r9ru23@yahoo.com', passwords: 'j3rrrr'}
     const records = await this.getAll();
     const record = {
       ...attrs,
@@ -59,12 +44,6 @@ class UsersRepository {
   }
 
   async comparePasswords(saved, supplied) {
-    //saved -> password savved in our database. 'hashed.salt'
-    //supplied -> password given to us by a user trying to sign in
-
-    // const result = saved.split('.');
-    // const hased = result[0];
-    // const salt = result[1];
     const [hashed, salt] = saved.split('.');
     const hashedSuppliedBuf = await scrypt(supplied, salt, 64);
 
@@ -72,7 +51,6 @@ class UsersRepository {
   }
 
   async writeAll(records) {
-    //write the updated records array back to this.filename
     await fs.promises.writeFile(
       this.filename,
       JSON.stringify(records, null, 2)
